@@ -27,7 +27,7 @@ const extension: JupyterFrontEndPlugin<void> = {
       }
     });
 
-    commands.execute(command, { origin: 'init' }).catch(reason => {
+    commands.execute(command, { origin: 'init' }).catch((reason: any) => {
       console.error(
         `An error occured during the execution of deploy-lab:command.\n${reason}`
       );
