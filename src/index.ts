@@ -10,9 +10,8 @@ const extension: JupyterFrontEndPlugin<void> = {
   id: 'cml-terminals',
   autoStart: true,
   activate: (app: JupyterFrontEnd) => {
-
     const { commands } = app;
-    const command = 'deploy-lab:command'
+    const command = 'deploy-lab:command';
 
     //Add Deploy Lab Command
     commands.addCommand(command, {
