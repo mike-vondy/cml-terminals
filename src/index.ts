@@ -45,9 +45,8 @@ const extension: JupyterFrontEndPlugin<void> = {
 
     //Add Deploy Lab Command
     commands.addCommand(command, {
-      label: (args: any) => (
-        args['isPalette'] ? 'Deploy New Lab': 'Deploy Lab'
-      ),
+      label: (args: any) =>
+        args['isPalette'] ? 'Deploy New Lab': 'Deploy Lab',
       caption: 'Deploy new CML Lab',
       icon: (args: any) => (args['isPalette'] ? null : icon),
       execute: async (args: any) => {
@@ -58,7 +57,6 @@ const extension: JupyterFrontEndPlugin<void> = {
           type: 'file',
           ext: 'py' 
         });
-        
         return commands.execute('docmanager:open', {
           path: model.path,
           factory: FACTORY
