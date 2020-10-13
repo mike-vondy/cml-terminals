@@ -13,7 +13,7 @@ Dynamic Terminal Generation for CML Projects
 ## Install
 
 ```bash
-jupyter labextension install cml-terminals
+jupyter labextension install @ansmikevdl/cml-terminals
 ```
 
 ## Contributing

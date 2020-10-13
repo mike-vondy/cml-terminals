@@ -1,5 +1,5 @@
 {
-  "name": "cml-terminals",
+  "name": "@ansmikevdl/cml-terminals",
   "version": "0.1.0",
   "description": "Dynamic Terminal Generation for CML Projects",
   "keywords": [
