@@ -1,6 +1,6 @@
 # cml-terminals
 
-![Github Actions Status](https://github.com/vondy-games/cml-terminals/workflows/Build/badge.svg)[![Binder](https://mybinder.org/badge_logo.svg)](https://172.18.1.100/v2/gh/vondy-games/cml-terminals/master?urlpath=lab)
+![Github Actions Status](https://github.com/vondy-games/cml-terminals/workflows/Build/badge.svg)[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vondy-games/cml-terminals/master?urlpath=lab)
 
 Dynamic Terminal Generation for CML Projects
 
