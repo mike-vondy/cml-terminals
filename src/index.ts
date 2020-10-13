@@ -20,16 +20,16 @@ const extension: JupyterFrontEndPlugin<void> = {
       caption: 'Deploy deploy-lab:command Command',
       execute: (args: any) => {
         const orig = args['origin'];
-        console.log('deploy-lab:command has been called from %{orig}.');
+        console.log(`deploy-lab:command has been called from ${orig}.`);
         if (orig !== 'init') {
-          window.alert('deploy-lab:command hass been called from ${orig}.');
+          window.alert(`deploy-lab:command hass been called from ${orig}.`);
         }
       }
     });
 
     commands.execute(command, { origin: 'init' }).catch(reason => {
       console.error(
-        'An error occured during the execution of deploy-lab:command.\n${reason}'
+        `An error occured during the execution of deploy-lab:command.\n${reason}`
       );
     });
   }
