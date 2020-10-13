@@ -34,7 +34,8 @@ const extension: JupyterFrontEndPlugin<void> = {
     browserFactory: IFileBrowserFactory,
     launcher: ILauncher | null,
     menu: IMainMenu | null,
-    palette: ICommandPalette | null ) => {
+    palette: ICommandPalette | null 
+  ) => {
     const { commands } = app;
     const command = CommandIDs.deployLab;
     const icon = new LabIcon({
@@ -44,9 +45,7 @@ const extension: JupyterFrontEndPlugin<void> = {
 
     //Add Deploy Lab Command
     commands.addCommand(command, {
-      label: (args: any) => (
-        args['isPalette'] ? 'Deploy New Lab': 'Deploy Lab'
-        ),
+      label: (args: any) => (args['isPalette'] ? 'Deploy New Lab': 'Deploy Lab'),
       caption: 'Deploy new CML Lab',
       icon: (args: any) => (args['isPalette'] ? null : icon),
       execute: async (args: any) => {
@@ -62,12 +61,6 @@ const extension: JupyterFrontEndPlugin<void> = {
           factory: FACTORY
         });
       }
-    });
-
-    commands.execute(command, { origin: 'init' }).catch((reason: any) => {
-      console.error(
-        `An error occured during the execution of deploy-lab:command.\n${reason}`
-      );
     });
 
     if (launcher) {
